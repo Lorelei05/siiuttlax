@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     #Local APPS
     'apps.home.apps.HomeConfig',
+    'apps.academy.apps.AcademyConfig',
 ]
 
 MIDDLEWARE = [
