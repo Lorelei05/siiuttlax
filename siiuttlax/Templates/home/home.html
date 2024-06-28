@@ -5,6 +5,12 @@
 {% block content %}
 <h1>Sistema Integral de Informacion UTTlaxcala</h1>
 <h2>SIIUTTlax</h2>
+<p>Colaboracion de Vishue, Noe Y Lore  🐶</p>
+<h3>Bienvenido {{user}}</h3>
+<form action="{% url 'logout' %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="salir">
+</form>
 <p>Colaboracion de Vishue y Noe  🐶</p>
 <a href="career.html">Career</a>
 {% endblock  %}
