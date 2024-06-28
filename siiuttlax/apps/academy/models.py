@@ -12,13 +12,13 @@ class Professor(User):
         Category, 
         on_delete=models.CASCADE, 
         default=1)
-    title=models.CharField(max_length=100)
+    title=models.CharField(max_length=100)   
 
     def __str__(self):
         return f"{self.level } - {self.short_name}"
 
     class Meta:
-        verbose_name = 'Profesor'
+        verbose_name = 'Profeso r'
         verbose_name_plural = 'Profesores'
 
 class Student(User):
