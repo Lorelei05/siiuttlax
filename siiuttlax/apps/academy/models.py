@@ -8,7 +8,10 @@ class Category(models.Model):
 # Create your models here.
 class Professor(User):
     employee_number = models.CharField(max_length=4)
-    category=models.ForeignKey(Category, on_delete=models.CASCADE)
+    category=models.ForeignKey(
+        Category, 
+        on_delete=models.CASCADE, 
+        default=1)
     title=models.CharField(max_length=100)
 class Student(User):
     enrollment = models.CharField(max_length=12, verbose_name='Matrícula')
