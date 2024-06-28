@@ -8,6 +8,8 @@ class Career(models.Model):
         ('Lic', 'Licenciatura'),
         ('M', 'Maestria')
     )
+    
+    #Modelo Career
     shortname = models.CharField(max_length=30, blank=False, null=False)
     status = models.BooleanField(default=True)
     level = models.CharField(max_length=3, choices=levels)
