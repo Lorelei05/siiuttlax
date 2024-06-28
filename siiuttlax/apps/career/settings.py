@@ -40,7 +40,6 @@ INSTALLED_APPS = [
 
     #Local APPS
     'apps.home.apps.HomeConfig',
-    'apps.career.apps.CareerConfig',
 ]
 
 MIDDLEWARE = [
