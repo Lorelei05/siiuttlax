@@ -2,6 +2,7 @@ from django.db import models
 from apps.academy.models import Professor
 from apps.periods.models import Semester
 
+
 class Career(models.Model):
     name = models.CharField(max_length=255, blank=False, null=False)
     levels = (
