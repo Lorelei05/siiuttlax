@@ -8,7 +8,7 @@ class Category(models.Model):
 # Create your models here.
 class Professor(User):
     employee_number = models.CharField(max_length=4)
-    category=models.ForeignKey(
+    category=models.ForeignKey( 
         Category, 
         on_delete=models.CASCADE, 
         default=1)
@@ -18,7 +18,7 @@ class Professor(User):
         return f"{self.level } - {self.short_name}"
 
     class Meta:
-        verbose_name = 'Profeso r'
+        verbose_name = 'Profesor'
         verbose_name_plural = 'Profesores'
 
 class Student(User):
