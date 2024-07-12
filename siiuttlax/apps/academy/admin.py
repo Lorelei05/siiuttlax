@@ -6,8 +6,8 @@ admin.site.register(Category)
 @admin.register(Professor)
 class ProfessorAdmin(admin.ModelAdmin):
     list_display = ('username', 'email', 'category', 'employee_number', 'title')
-    fields=('first_name','last_name','category','employee_number', 'title', 'email')
+    fields=('first_name','username','last_name', 'password','category','employee_number', 'title', 'email')
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
     list_display = ( 'first_name','username', 'last_name', 'enrollment')
-    fields=('first_name','username', 'last_name','enrollment','email')
+    fields=('first_name','username', 'last_name','password','enrollment','email')
