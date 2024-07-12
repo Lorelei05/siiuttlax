@@ -1,1 +1,98 @@
 
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+
+html,body {
+    position: relative;
+    min-height: 100vh;
+    background-color: #E1E8EE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.form-structor {
+    background-color: #222;
+    border-radius: 15px;
+    height: 500px;
+    width: 350px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.form-structor::after {
+    content: '';
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: cover;
+    background-image: url('/static/images/degradado.jpg');
+}
+
+.signup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    z-index: 5;
+    transition: all .3s ease;
+    text-align: center;
+}
+
+.form-img {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.centered-img {
+    max-width: 100px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+}
+
+
+.form-holder  {
+    color: transparent;
+}
+
+.form-holder input {
+    background-color: rgba(3, 3, 3, 0.493);
+    color:  #cfcfcf;
+    border: 1.5px solid #9a9a9a;
+    border-radius: 15px;
+    display: block;
+    overflow: hidden;
+    padding: 10px 42px;
+    font-size: 13px;
+}
+
+
+
+.submit-btn {
+    background-color: #45a049;
+    color:#ffffff; 
+    border: 0;
+    border-radius: 30px;
+    display: block;
+    margin: 15px auto; 
+    padding: 12px 45px;
+    width: 100%;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.submit-btn:hover {
+    background-color: #106114; 
+}
