@@ -9,7 +9,7 @@ def home(request):
         if user.professor:
             type_user = 'professor'
         elif user.student:
-            type_user = 'student' 
+            type_user = 'student'
     except:
         type_user = 'other'
     context = {
