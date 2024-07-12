@@ -5,6 +5,8 @@ class Category(models.Model):
     name=models.CharField(max_length=100)
     short_name=models.CharField(max_length=15)
     description=models.TextField()
+    def __str__(self):
+        return f"{self.name} - {self.short_name}"
 # Create your models here.
 class Professor(User):
     employee_number = models.CharField(max_length=4)
@@ -15,7 +17,7 @@ class Professor(User):
     title=models.CharField(max_length=100)   
 
     def __str__(self):
-        return f"{self.level } - {self.short_name}"
+        return f"{self.category} - {self.first_name}"
 
     class Meta:
         verbose_name = 'Profesor'
@@ -27,7 +29,7 @@ class Student(User):
         verbose_name='Matricula')
     
     def __str__(self):
-        return f"{self.level } - {self.short_name}"
+        return f"{self.enrollment } - {self.first_name}"
 
     class Meta:
         verbose_name = 'Estudiante'

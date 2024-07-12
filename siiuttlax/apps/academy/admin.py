@@ -8,6 +8,6 @@ class ProfessorAdmin(admin.ModelAdmin):
     list_display = ('username', 'email', 'category', 'employee_number', 'title')
     fields=('first_name','last_name','category','employee_number', 'title', 'email')
 @admin.register(Student)
-class ProfessorAdmin(admin.ModelAdmin):
-    list_display = ( 'first_name', 'last_name', 'enrollment')
-    fields=('first_name','last_name','enrollment','email')
+class StudentAdmin(admin.ModelAdmin):
+    list_display = ( 'first_name','username', 'last_name', 'enrollment')
+    fields=('first_name','username', 'last_name','enrollment','email')
