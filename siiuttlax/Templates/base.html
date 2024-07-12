@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>SIIUTTlax 2024 | {% block title %}{% endblock %}</title>
 </head>
-<body>
+<body class="light-theme">
     <div class="container">
         {% if messages %}
         <ul>
@@ -15,7 +15,7 @@
                 <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
             {% endfor %}
         </ul>
-    {% endif %}
+        {% endif %}
         {% block content %}
         {% endblock %}
     </div>
