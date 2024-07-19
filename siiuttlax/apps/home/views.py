@@ -8,15 +8,10 @@ def home(request):
     try:
         if user.professor:
             type_user = 'professor'
+        elif user.student:
+            type_user = 'student'
     except:
         type_user = 'other'
-
-    if type_user == "other":
-        try:
-            if user.student:
-                type_user = 'student'
-        except:
-            type_user = 'other'
     context = {
         "user": user,
         "type_user": type_user
