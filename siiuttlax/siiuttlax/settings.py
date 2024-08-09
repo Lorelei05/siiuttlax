@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'apps.academy.apps.AcademyConfig',
     'apps.career.apps.CareerConfig',
     'apps.periods.apps.PeriodsConfig',
+    'apps.group.apps.GroupConfig',
 ]
 
 MIDDLEWARE = [
