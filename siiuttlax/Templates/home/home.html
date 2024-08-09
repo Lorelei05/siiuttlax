@@ -3,15 +3,19 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<div class="home-container">
-    <h1>Sistema Integral de Informacion UTTlaxcala</h1>
-    <h2>SIIUTTlax</h2>
-    <p>Colaboracion de Vishue, Noe y Lore 🐶</p>
-    <h3>Bienvenido {{ user }}</h3>
-    <h3>Yo soy {{ type_user }}</h3>
-    <form action="{% url 'logout' %}" method="post" class="logout-form">
-        {% csrf_token %}
-        <input type="submit" value="salir">
-    </form>
+<div class="home-wrapper">
+    <div class="home-container">
+        <h1>Sistema Integral de Informacion UTTlaxcala</h1>
+        <h3>Bienvenido {{ user }}</h3>
+        <h3>Yo soy {{ type_user }}</h3>
+        <form action="{% url 'logout' %}" method="post" class="logout-form">
+            {% csrf_token %}
+            <input type="submit" class="submit-btn" value="Salir">
+        </form>
+    </div>
+    <div class="image-container">
+        <img src="/static/images/plant.gif" class="centered-imgs" />
+    </div>
 </div>
+
 {% endblock %}
