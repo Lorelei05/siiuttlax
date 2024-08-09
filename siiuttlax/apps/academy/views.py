@@ -23,9 +23,24 @@ def create_prof(request):
 
     form=ProfessorForm()
     return render(request,
-                'academy/create_professor.html',
+                'academy/create_professor.html',   
                 {'form':form})
 def create_student(request):
+    if request.method == 'POST':
+        form=StudentForm(request.POST)
+        if form.is_valid():
+            username=form.cleaned_data['username']
+            first_name=form.cleaned_data['first_name']
+            password=form.cleaned_data['password']
+            enrollment=form.cleaned_data['enrollment']
+
+            Student.objects.create_user(
+                username=username,
+                first_name=first_name,
+                password=password,
+                enrollment=enrollment,
+            )
+            return redirect('academy:students_create')
     form=StudentForm()
     return render(request,
                 'academy/create_student.html',
