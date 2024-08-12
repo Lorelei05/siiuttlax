@@ -94,3 +94,28 @@ html,body {
 .submit-btn:hover {
     background-color: #106114; 
 }
+
+
+/*      Home.html                  */
+
+.home-wrapper {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+}
+
+.home-container {
+    flex: 3; /* Permite que este div tome el espacio necesario */
+}
+
+.image-container {
+    flex: 1; /* Este div tomará solo el espacio necesario para la imagen */
+}
+
+.centered-imgs {
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+}
+
