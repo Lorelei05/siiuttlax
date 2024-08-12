@@ -28,7 +28,11 @@ def student(request):
     user = request.user
     student = user.student
     group = student.group_set.all().first()
-    career = group.career
+    
+    if group is not None:
+        career = group.career
+    else:
+        career = None 
 
     context = {
         'student': student,
@@ -37,11 +41,16 @@ def student(request):
     }
     return render(request, 'home/student.html', context)
 
+
 def professor(request):
     user = request.user
     professor = user.professor
     group = professor.group_set.all().first()
-    career = group.career
+    if group is not None:
+        career = group.career
+    else:
+        career = None 
+
 
     context = {
         'professor': professor,

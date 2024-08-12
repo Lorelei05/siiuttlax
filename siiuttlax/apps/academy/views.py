@@ -19,7 +19,7 @@ def create_prof(request):
                 category=category,
                 employee_number=employee_number
             )
-            return redirect('academy:professors_create')
+            return redirect('academy:create_professor')
 
     form=ProfessorForm()
     return render(request,
