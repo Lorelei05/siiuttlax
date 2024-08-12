@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Bienvenido {{ student }}</h1>
+<p> Carrera: {{ career }}</p>
+<p> Grupo: {{ group.group }}</p>
+<p> Tutor: {{ group.tutor }}</p>
+
+<form action="{% url 'logout' %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Salir">
+</form>
+{% endblock  %}

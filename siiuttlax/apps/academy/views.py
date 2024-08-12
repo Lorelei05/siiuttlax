@@ -13,6 +13,8 @@ def create_prof(request):
     return render(request,
                 'academy/create_professor.html',   
                 {'form':form})
+  
+  
 def create_student(request):
     if request.method == 'POST':
         form=StudentForm(request.POST)
