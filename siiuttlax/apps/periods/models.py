@@ -23,7 +23,7 @@ class Period(models.Model):
         ordering=['id']
 
 class  Semester(models.Model):
-    semester = models.CharField(max_length=2, verbose_name="Cuatrimestre")
+    semester = models.CharField(max_length=10, verbose_name="Cuatrimestre")
 
     semester_name = models.CharField(max_length=10, verbose_name="Cuatrimestre en Letra")
 

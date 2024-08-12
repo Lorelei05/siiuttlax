@@ -1,4 +1,3 @@
-
 import django.db.models.deletion
 from django.db import migrations, models
 
@@ -9,7 +8,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('academy', '0001_initial'),
-        ('periods', '0001_initial'),
+        ('periods', '0002_period_cycle'),
     ]
 
     operations = [
